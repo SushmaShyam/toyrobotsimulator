@@ -6,8 +6,6 @@ describe "Grid" do
   context "invalid grid" do
      it "does not accept values lesser than one" do
        expect{Grid.new(-5, -5)}.to raise_error ArgumentError
-       expect{Grid.new(5, 0)}.to raise_error ArgumentError
-       expect{Grid.new(-2, 4)}.to raise_error ArgumentError
      end     
   end
   
@@ -28,6 +26,9 @@ describe "Grid" do
       end
       it "re†urns true for the corner to the right of the origin" do
         expect(grid.valid_position?(Position.new(4,0))).to be true
+      end
+      it "returns true for the point part of the grid" do
+        expect(grid.valid_position?(Position.new(2,2))).to be true
       end
     end
     

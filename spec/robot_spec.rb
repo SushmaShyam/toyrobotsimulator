@@ -13,7 +13,6 @@ describe "Robot" do
   end
   context "before a robot is placed on a grid" do
     it "has nil default position" , :turn1 => true do
-      puts @robot.position
       expect(@robot_not_placed.position).to eq(nil)
     end
     it "has nil default direction" do

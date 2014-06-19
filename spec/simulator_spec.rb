@@ -23,14 +23,20 @@ describe 'Simulator' do
       expect(simulator.command("PLACE 2,2,E")).to eq(true)
     end
     it "accepts valid move command" do
-      expect(simulator.command("PLACE 2,2,E")).to eq(true)
+      simulator.command("PLACE 2,2,E")
       expect(simulator.command("MOVE")).to eq(true)
     end    
-    it "accepts valid left and right commands" do
-      expect(simulator.command("PLACE 2,2,E")).to eq(true)
-      expect(simulator.command("LEFT")).to eq(true)
+    it "accepts valid left command" do
+      simulator.command("PLACE 2,2,E")
+      expect(simulator.command("LEFT")).to eq(true)      
+    end
+    it "accepts valid right command" do
+      simulator.command("PLACE 2,2,E")
       expect(simulator.command("RIGHT")).to eq(true)
     end
-    
+    it "accepts the report command" do
+      simulator.command("PLACE 2,2,E")
+      expect(simulator.command("REPORT")).to eq(true)
+    end
   end
 end
