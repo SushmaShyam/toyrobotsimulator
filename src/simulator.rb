@@ -7,8 +7,10 @@ class Simulator
   include Constants
   def initialize(grid_length, grid_width)
     @grid = Grid.new(grid_length, grid_width)
-    @robot = Robot.new
+    
+    @robot = Robot.new    
     @grid.add_robot(@robot)
+    
     @robot_view = RobotView.new(@robot)
   end
   
@@ -22,21 +24,19 @@ class Simulator
     end
 
     return command_executed if command.nil? || !@robot.methods.include?(command.downcase.to_sym)
+    
     if arguments.nil?
       command_executed = @robot.method(command.downcase).call()
     else
       command_executed = @robot.method(command.downcase).call(arguments)
     end
+    
     return command_executed
   end
-  
-
   
   private
   def extract_command(command_statement)
     command_array = command_statement.split(COMMAND_SEPERATOR)
     return command_array
   end
-  
-  
 end

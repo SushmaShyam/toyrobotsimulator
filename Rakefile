@@ -8,4 +8,3 @@ task :simulate, [:test_path] do |t, args|
 end
 
 task :default => [:simulate]
-

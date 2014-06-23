@@ -1,7 +1,8 @@
-class RobotView
+class RobotView  
   def initialize(robot)
     @robot = robot
   end
+  
   def show
     if @robot.position.nil?
       puts "Robot yet to be placed on the grid"  

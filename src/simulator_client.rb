@@ -10,7 +10,3 @@ else
   puts "The first argument should be the path of a file with commands to the simulator" 
   return
 end
-
-
-
-
