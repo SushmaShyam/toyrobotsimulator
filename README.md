@@ -17,10 +17,10 @@ The commands accepted by the simulator are:-
 In this example, the commands are read out of a text file provided to the simulator.
 Each command in the text file is on a new line.
 
-##Installation
+## Installation
 
 
-####Prerequisites
+#### Prerequisites
 
 
 - Ruby 2.x.x
@@ -29,7 +29,7 @@ Each command in the text file is on a new line.
 You can git clone this repository onto your machine and 'bundle install' to have all the dependancies needed. 
 
 
-####Dependancies
+#### Dependancies
 
 RubyGems used:-
 
@@ -37,7 +37,7 @@ RubyGems used:-
 
 This application has been successfully run and tested on Ruby 2.0.0p481 with RSpec 3.0.0
 
-##Instructions for running the application
+## Instructions for running the application
 
 This application can be run from the command line using the following command
 
@@ -45,7 +45,7 @@ This application can be run from the command line using the following command
 
 The parameter inside the square brackets is a file that contains the commands that need to be handled by the simulator.
 
-##More about this Toy Robot Simulator
+## More about this Toy Robot Simulator
 
 The usage of the MVC design pattern in this software, seperating the routing of commands (Simulator) , the actual business logic (Robot) and 
 the view (RobotView) allows for the below mentioned extensions.
