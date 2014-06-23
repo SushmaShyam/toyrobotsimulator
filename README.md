@@ -15,10 +15,10 @@ The commands accepted by the simulator are:-
 - RIGHT
 - REPORT
 
-. PLACE will put the toy robot on the table in position X,Y and facing NORTH(N), SOUTH(S), EAST(E) or WEST(W). 
-. MOVE will move the toy robot one unit forward in the direction it is currently facing.
-. LEFT and RIGHT will rotate the robot 90 degrees in the specified direction without changing the position of the robot.
-. REPORT will announce the X,Y and direction of the robot on to the standard output
+* PLACE will put the toy robot on the table in position X,Y and facing NORTH(N), SOUTH(S), EAST(E) or WEST(W). 
+* MOVE will move the toy robot one unit forward in the direction it is currently facing.
+* LEFT and RIGHT will rotate the robot 90 degrees in the specified direction without changing the position of the robot.
+* REPORT will announce the X,Y and direction of the robot on to the standard output
 
 In this example, the commands are read out of a text file provided to the simulator.
 Each command in the text file is on a new line.
@@ -31,14 +31,18 @@ You can git clone this repository onto your machine and 'bundle install' to have
 Dependancies
 ==============
 
-This application has been tested on ruby 2.0.0p481 with rspec 3.0.0
+RubyGems used:-
+
+- RSpec 3.0
+
+This application has been successfully run and tested on Ruby 2.0.0p481 with RSpec 3.0.0
 
 Instructions for running the application
 =========================================
 
 This application can be run from the command line using the following command
 
-'rake simulate[testdata/data.in]'
+<code>rake simulate[testdata/data.in]</code>
 
 The parameter inside the square brackets is a file that contains the commands that need to be handled by the simulator.
 
@@ -48,7 +52,7 @@ More about this Toy Robot Simulator
 The usage of the MVC design pattern in this software, seperating the routing of commands (Simulator) , the actual business logic (Robot) and 
 the view (RobotView) allows for the below mentioned extensions.
 
-This simulator can be extended to support more commands, by adding more methods to the Robot class. 
+This simulator can be extended to support more commands, by adding more methods to the Robot Class. 
 Since dynamic method invokation is used, the simulator as such need not be modified for additional command support 
 
 While the report command today simply prints the current position and direction onto the console, it can be extended
