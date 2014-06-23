@@ -2,7 +2,9 @@ require_relative 'grid'
 require_relative 'robot'
 require_relative 'constants'
 require_relative 'robot_view'
+
 class Simulator
+  include Constants
   def initialize(grid_length, grid_width)
     @grid = Grid.new(grid_length, grid_width)
     @robot = Robot.new

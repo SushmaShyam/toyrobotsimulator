@@ -3,6 +3,7 @@ require_relative 'grid'
 require_relative 'constants'
 
 class Robot
+  include Constants
   attr_writer :grid
   attr_reader :position, :direction
   def initialize

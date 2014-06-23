@@ -1,7 +1,9 @@
-DIRECTIONS = [:E , :S, :W, :N]
+module Constants
+  DIRECTIONS = [:E , :S, :W, :N]
 
-COMMANDS = ["PLACE", "MOVE", "LEFT", "RIGHT", "REPORT"]
+  COMMANDS = ["PLACE", "MOVE", "LEFT", "RIGHT", "REPORT"]
 
-ARGUMENT_SEPERATOR = ","
+  ARGUMENT_SEPERATOR = ","
 
-COMMAND_SEPERATOR = ' '
+  COMMAND_SEPERATOR = ' '
+end
