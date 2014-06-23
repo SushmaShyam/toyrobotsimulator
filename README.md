@@ -9,16 +9,10 @@ The grid size in this example is 5x5.
 
 The commands accepted by the simulator are:-
 
-- PLACE X,Y,F
-- MOVE
-- LEFT
-- RIGHT
-- REPORT
-
-* PLACE will put the toy robot on the table in position X,Y and facing NORTH(N), SOUTH(S), EAST(E) or WEST(W). 
-* MOVE will move the toy robot one unit forward in the direction it is currently facing.
-* LEFT and RIGHT will rotate the robot 90 degrees in the specified direction without changing the position of the robot.
-* REPORT will announce the X,Y and direction of the robot on to the standard output
+* PLACE X,Y,F: This will put the toy robot on the table in position X,Y and facing F i.e. NORTH(N), SOUTH(S), EAST(E) or WEST(W). 
+* MOVE: This will move the toy robot one unit forward in the direction it is currently facing.
+* LEFT and RIGHT: These will rotate the robot 90 degrees in the specified direction without changing the position of the robot.
+* REPORT: This will announce the X,Y and direction of the robot on to the standard output
 
 In this example, the commands are read out of a text file provided to the simulator.
 Each command in the text file is on a new line.
@@ -26,7 +20,13 @@ Each command in the text file is on a new line.
 Installation
 ==============
 
+Prerequisites:
+--------------
+1) Ruby 2.x.x
+2) Bundler gem (can be installed using gem install bundler)
+
 You can git clone this repository onto your machine and 'bundle install' to have all the dependancies needed. 
+
 
 Dependancies
 ==============
