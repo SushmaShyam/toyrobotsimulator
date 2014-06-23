@@ -1,4 +1,5 @@
-Overview:-
+Overview
+==========
 
 This is a toy robot simulator. It simulates placement and navigation of a robot on a grid. 
 This simulator will not allow placement or navigation of the robot outside the grid. 
@@ -22,25 +23,32 @@ The commands accepted by the simulator are:-
 In this example, the commands are read out of a text file provided to the simulator.
 Each command in the text file is on a new line.
 
-Installation:-
+Installation
+==============
 
 You can git clone this repository onto your machine and 'bundle install' to have all the dependancies needed. 
-There is only one dependancy we have as of now, and that is the rspec gem used for writing the tests.
 
-Instructions for running the application:-
+Dependancies
+==============
+
+This application has been tested on ruby 2.0.0p481 with rspec 3.0.0
+
+Instructions for running the application
+=========================================
 
 This application can be run from the command line using the following command
 
-rake simulate[testdata/data.in]
+'rake simulate[testdata/data.in]'
 
 The parameter inside the square brackets is a file that contains the commands that need to be handled by the simulator.
 
-More about this toy robot simulator:-
+More about this Toy Robot Simulator
+====================================
 
 The usage of the MVC design pattern in this software, seperating the routing of commands (Simulator) , the actual business logic (Robot) and 
 the view (RobotView) allows for the below mentioned extensions.
 
-This simulator can be extended to support more commands, by adding more methods to the robot. 
+This simulator can be extended to support more commands, by adding more methods to the Robot class. 
 Since dynamic method invokation is used, the simulator as such need not be modified for additional command support 
 
 While the report command today simply prints the current position and direction onto the console, it can be extended
