@@ -7,4 +7,4 @@ task :simulate, [:test_path] do |t, args|
   ruby "src/simulator_client.rb #{args[:test_path]}" 
 end
 
-task :default => [:simulate]
+task :default => [:spec]
