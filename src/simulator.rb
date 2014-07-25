@@ -31,12 +31,12 @@ class Simulator
       command_executed = @robot.method(command.downcase).call(arguments)
     end
     
-    return command_executed
+    command_executed
   end
   
   private
   def extract_command(command_statement)
     command_array = command_statement.split(COMMAND_SEPERATOR)
-    return command_array
+    command_array
   end
 end

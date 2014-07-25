@@ -8,6 +8,6 @@ class Position
   end
   
   def to_s
-    return "(#@x, #@y)"
+    "(#@x, #@y)"
   end
 end

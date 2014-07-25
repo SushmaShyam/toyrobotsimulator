@@ -7,6 +7,5 @@ unless ARGV[0].nil? || !File.exist?(ARGV[0])
     simulator.command(line)
   end
 else
-  puts "The first argument should be the path of a file with commands to the simulator" 
-  return
+  puts "The first argument should be the path of a file with commands to the simulator"
 end
