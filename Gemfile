@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'rspec',">= 2.8.1", :require => 'spec'
+gem 'rspec',">= 3.0.0", :require => 'spec'
 

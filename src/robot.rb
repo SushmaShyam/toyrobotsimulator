@@ -1,32 +1,35 @@
 require_relative 'position'
 require_relative 'grid'
-require_relative 'constants'
 
 class Robot
-  include Constants
-  attr_writer :grid
   attr_reader :position, :direction
+  DIRECTIONS = [:E , :S, :W, :N]
   
-  def initialize
+  def initialize(grid)
     @position = nil
     @direction = nil
+    @grid = grid
   end
   
-  def place(argument_string)
-    arguments = argument_string.split(ARGUMENT_SEPERATOR)
-    return false unless arguments.count == 3 
-    
-    position = Position.new(arguments[0].to_i, arguments[1].to_i)
-    direction = arguments[2].to_sym
+  def set_view(view)
+    @view = view
+  end
+  
+  def report
+    @view.show
+  end
+  
+  def place(x,y,direction)
+    position = Position.new(x,y)
     return false unless @grid.valid_position?(position) && DIRECTIONS.include?(direction)
     
     @position = position
-    @direction = direction
-    return true
+    @direction = direction    
+    true
   end
   
   def move
-    return_value = true
+    moved = true
     
     case @direction
       when (:E)
@@ -38,15 +41,16 @@ class Robot
       when (:S)
         new_position = Position.new(@position.x, @position.y-1)
       else
-        return_value = false  
+        moved = false  
     end
     
-    if return_value && @grid.valid_position?(new_position)
+    if moved && @grid.valid_position?(new_position)
       @position = new_position
-      return true
+      moved = true
     else
-      return false
+      moved = false
     end
+    moved
   end
   
   def left
@@ -60,7 +64,7 @@ class Robot
       @direction = DIRECTIONS.last
     end
     
-    return true
+    true
   end
   
   def right
@@ -74,6 +78,6 @@ class Robot
       @direction = DIRECTIONS.last
     end    
     
-    return true
+    true
   end
 end

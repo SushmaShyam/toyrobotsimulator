@@ -7,7 +7,7 @@ class RobotView
     if @robot.position.nil?
       puts "Robot yet to be placed on the grid"  
     else
-      puts "robot is at position, #{@robot.position} and is facing #{@robot.direction}"
+      puts "Robot is at position, #{@robot.position} and is facing #{@robot.direction}"
     end    
   end
 end

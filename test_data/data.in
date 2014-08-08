@@ -1,16 +1,13 @@
-==================
 PLACE 5,5,E
 MOVE
 REPORT
 RIGHT
 MOVE
 REPORT
-==================
 PLACE 2,3,N
 MOVE
 LEFT
 REPORT
-==================
 PLACE 5,3,N
 REPORT
 MOVE
@@ -31,4 +28,3 @@ REPORT
 MOVE
 MOVE
 REPORT
-==================

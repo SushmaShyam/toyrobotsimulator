@@ -39,6 +39,6 @@ describe "Grid" do
       it "re†urns false for points outside the grid" do
         expect(grid.valid_position?(Position.new(0,5))).to be false
       end
-    end
+    end   
   end
 end

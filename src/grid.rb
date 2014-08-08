@@ -7,7 +7,6 @@ class Grid
   
   def add_robot(robot)
     @robot = robot
-    @robot.grid = self
   end
   
   def valid_position?(position)
