@@ -19,6 +19,10 @@ class Robot
     @view.show
   end
   
+  def jump
+    position = nil 
+  end
+  
   def place(x,y,direction)
     position = Position.new(x,y)
     return false unless @grid.valid_position?(position) && DIRECTIONS.include?(direction)
@@ -28,23 +32,26 @@ class Robot
     true
   end
   
-  def move
-    moved = true
-    
+  def next_position
+    next_x = @position.x
+    next_y = @position.y
     case @direction
       when (:E)
-        new_position = Position.new(@position.x+1, @position.y)        
+        next_x += 1      
       when (:W)
-        new_position = Position.new(@position.x-1, @position.y)
+        next_x -= 1
       when (:N)
-        new_position = Position.new(@position.x, @position.y+1)
+        next_y += 1
       when (:S)
-        new_position = Position.new(@position.x, @position.y-1)
-      else
-        moved = false  
+        next_y -= 1 
     end
-    
-    if moved && @grid.valid_position?(new_position)
+    next_position = Position.new(next_x, next_y)
+  end
+
+  def move
+    return false if @direction.nil?
+    new_position = next_position
+    if @grid.valid_position?(new_position)
       @position = new_position
       moved = true
     else

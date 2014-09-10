@@ -47,8 +47,7 @@ The parameter inside the square brackets is a file that contains the commands th
 
 ## More about this Toy Robot Simulator
 
-The usage of the MVC design pattern in this software, seperating the routing of commands (Simulator) , the actual business logic (Robot) and 
-the view (RobotView) allows for the below mentioned extensions.
+The usage of the MVC design pattern in this software, seperating the routing of commands (Simulator) , the actual business logic (Robot) and the view (RobotView) allows for the below mentioned extensions.
 	
 This simulator can be extended to support more commands, by adding more methods to the Robot Class. 
 Since dynamic method invokation is used, the simulator as such need not be modified for additional command support 

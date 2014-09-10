@@ -14,14 +14,15 @@ class Directive
 
   def construct_arguments(arguments)
     @arguments = arguments.split(PARAMETER_SEPERATOR)
-    @arguments.map! do |argument|
-      argument.chomp!
-      if (argument =~ /\d+/) # is a digit
-        argument = argument.to_i
-      else
-        argument = argument.to_sym
-      end
+    @arguments.map! do |argument|      
+      clean_argument(argument)
     end
+  end
+  
+  def clean_argument(argument)
+    argument.chomp!
+    return argument.to_i if argument =~ /\d+/
+    argument.to_sym
   end
 
 end
